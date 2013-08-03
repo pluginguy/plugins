@@ -60,14 +60,14 @@
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-Ins\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)-$(ProjectName)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)-$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-Ins\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-Ins\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)-$(ProjectName)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)-$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.8bf</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.8bf</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.8bf</TargetExt>
@@ -117,7 +117,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>$(IntDir)Greyc.lib</ImportLibrary>
+      <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
@@ -169,7 +169,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>$(IntDir)Greyc.lib</ImportLibrary>
+      <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
     </Link>
     <Bscmake>
       <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
@@ -231,7 +231,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>$(IntDir)Greyc.lib</ImportLibrary>
+      <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
@@ -293,7 +293,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>$(IntDir)Greyc.lib</ImportLibrary>
+      <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
     </Link>
     <Bscmake>
       <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>

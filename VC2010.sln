@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greyc", "Greyc\GreycShop.vcxproj", "{F0BA4F9D-0E19-4AF5-8663-B8D04D201D9B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greyc-helper", "greyc\Greyc-runner.vcxproj", "{E1CBB42B-43A7-48F9-AAA9-F74C22A85B52}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greyc-helper", "Greyc\Greyc-runner.vcxproj", "{E1CBB42B-43A7-48F9-AAA9-F74C22A85B52}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "USM2", "USM2\USM2.vcxproj", "{C6E2ECFE-E3BC-40D2-A160-DDF8A304A6E2}"
 EndProject

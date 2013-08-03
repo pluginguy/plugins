@@ -38,10 +38,10 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)-$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)-$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.bin</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.bin</TargetExt>
   </PropertyGroup>
