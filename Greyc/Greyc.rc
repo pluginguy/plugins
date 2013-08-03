@@ -1,0 +1,168 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""Greyc.pipl""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+GREYC_ANISO_DIALOG DIALOGEX 34, 40, 406, 260
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GREYCstoration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",1,372,244,34,14,BS_NOTIFY
+    LTEXT           "S&trength",IDC_STATIC,254,17,63,8
+    EDITTEXT        IDC_EDIT_AMPLITUDE,319,16,40,12,ES_AUTOHSCROLL
+    LTEXT           "&Contour preservation",IDC_STATIC,254,28,63,8
+    EDITTEXT        IDC_EDIT_SHARPNESS,319,27,40,12,ES_AUTOHSCROLL
+    LTEXT           "A&nisotropy",IDC_STATIC,254,39,63,8
+    EDITTEXT        IDC_EDIT_ANISOTROPY,319,38,40,12,ES_AUTOHSCROLL
+    LTEXT           "Noise sc&ale",IDC_STATIC,254,50,63,8
+    EDITTEXT        IDC_EDIT_ALPHA,319,49,40,12,ES_AUTOHSCROLL
+    LTEXT           "Geometry re&gularity",IDC_STATIC,254,61,63,8
+    EDITTEXT        IDC_EDIT_SIGMA,319,60,40,12,ES_AUTOHSCROLL
+    LTEXT           "Initial gaussian blur",IDC_STATIC,254,72,63,10
+    EDITTEXT        IDC_EDIT_PRE_BLUR,319,71,40,12,ES_AUTOHSCROLL
+    LTEXT           "Iterations",IDC_STATIC,254,83,63,8
+    EDITTEXT        IDC_EDIT_ITERATIONS,319,82,40,12,ES_AUTOHSCROLL
+    LTEXT           "Gfact",IDC_STATIC,254,104,17,8
+    EDITTEXT        IDC_EDIT_GFACT,319,103,40,12,ES_AUTOHSCROLL
+    LTEXT           "Spatial step",IDC_STATIC,254,115,37,8
+    EDITTEXT        IDC_EDIT_DL,319,114,40,12,ES_AUTOHSCROLL
+    LTEXT           "Angular step",IDC_STATIC,254,126,39,8
+    EDITTEXT        IDC_EDIT_DA,319,125,40,12,ES_AUTOHSCROLL
+    LTEXT           "Gauss precision",IDC_STATIC,254,137,50,8
+    EDITTEXT        IDC_EDIT_GAUSS_PREC,319,136,40,12,ES_AUTOHSCROLL
+    LTEXT           "Interpolation",IDC_STATIC,254,149,39,8
+    COMBOBOX        IDC_INTERPOLATE,319,147,51,17,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Stage display",IDC_STATIC,254,161,44,10
+    COMBOBOX        IDC_STAGE_DISPLAY,319,159,86,15,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Threads",IDC_STATIC,254,173,27,8
+    COMBOBOX        IDC_THREADS,319,171,49,18,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Fast approximation",IDC_FAST_APPROX,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,253,183,76,11
+    CONTROL         "Alt. amplitude",IDC_ALT_AMPLITUDE,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,253,193,76,10
+    CONTROL         "GPU",IDC_GPU,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,253,204,76,9
+    PUSHBUTTON      "C&opy",IDC_COPY,268,244,23,14
+    PUSHBUTTON      "&Compare",IDC_COMPARE,292,244,43,14
+    PUSHBUTTON      "Cancel",2,336,244,34,14,BS_NOTIFY
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,187,249,55,9
+    LTEXT           "(-dt)",IDC_STATIC,364,18,35,8
+    LTEXT           "(-p)",IDC_STATIC,364,29,35,8
+    LTEXT           "(-a)",IDC_STATIC,364,40,35,8
+    LTEXT           "(-alpha)",IDC_STATIC,364,51,35,8
+    LTEXT           "(-sigma)",IDC_STATIC,364,62,35,8
+    LTEXT           "(-dl)",IDC_STATIC,364,115,13,8
+    LTEXT           "(-fact)",IDC_STATIC,364,104,18,8
+    LTEXT           "(-da)",IDC_STATIC,364,126,15,8
+    LTEXT           "(-prec)",IDC_STATIC,364,137,21,8
+    LTEXT           "(-iter)",IDC_STATIC,364,83,35,8
+    LTEXT           "(-fast)",IDC_STATIC,364,184,18,8
+    GROUPBOX        "Advanced",IDC_STATIC,246,95,159,121,BS_RIGHT
+    LTEXT           "(-gauss)",IDC_STATIC,364,73,35,11
+    COMBOBOX        IDC_DISPLAY_MODE,2,245,59,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",ID_PROXY_ITEM,3,3,238,239
+END
+
+PROGRESS DIALOGEX 0, 0, 202, 24
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Removing noise..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,145,6,44,12
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,10,7,128,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    "GREYC_ANISO_DIALOG", DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 126
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 73
+    END
+
+    "PROGRESS", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DRAG_VERT_CURSOR    CURSOR                  "drag cursor.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "Greyc.pipl"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

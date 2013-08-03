@@ -1,0 +1,133 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""USM2.pipl""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+PROGRESS DIALOGEX 0, 0, 202, 24
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Sharpening..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,145,6,44,12
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,10,7,128,10
+END
+
+UNSHARP2_DIALOG DIALOGEX 34, 40, 406, 260
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Unsharp Mask 2"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",1,372,244,34,14,BS_NOTIFY
+    LTEXT           "Ra&dius",-1,254,17,63,8
+    EDITTEXT        IDC_EDIT_RADIUS,319,16,40,12,ES_AUTOHSCROLL
+    LTEXT           "&Amount +",-1,254,28,29,8
+    EDITTEXT        IDC_EDIT_AMOUNT_UP,319,27,40,12,ES_AUTOHSCROLL
+    LTEXT           "Amou&nt -",-1,254,39,63,8
+    EDITTEXT        IDC_EDIT_AMOUNT_DOWN,319,38,40,12,ES_AUTOHSCROLL
+    LTEXT           "T&hreshold",-1,254,50,63,8
+    EDITTEXT        IDC_EDIT_THRESHOLD,319,49,40,12,ES_AUTOHSCROLL
+    LTEXT           "&Gamma",-1,254,61,63,8
+    EDITTEXT        IDC_EDIT_GAMMA,319,60,40,12,ES_AUTOHSCROLL
+    LTEXT           "&Highlights",-1,254,83,63,8
+    EDITTEXT        IDC_EDIT_HIGHLIGHT_NOISE,319,81,40,12,ES_AUTOHSCROLL
+    LTEXT           "&Light",-1,254,94,63,8
+    EDITTEXT        IDC_EDIT_LIGHT_NOISE,319,92,40,12,ES_AUTOHSCROLL
+    LTEXT           "&Midtones",-1,254,105,29,8
+    EDITTEXT        IDC_EDIT_MIDTONE_NOISE,319,103,40,12,ES_AUTOHSCROLL
+    LTEXT           "&Shadows",-1,254,116,29,8
+    EDITTEXT        IDC_EDIT_SHADOW_NOISE,319,114,40,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "C&opy",IDC_COPY,268,244,23,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "&Compare",IDC_COMPARE,292,244,43,14
+    PUSHBUTTON      "Cancel",2,336,244,34,14,BS_NOTIFY
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,187,249,55,9
+    COMBOBOX        IDC_DISPLAY_MODE,2,245,59,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",ID_PROXY_ITEM,3,3,242,241
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    "PROGRESS", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+
+    "UNSHARP2_DIALOG", DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 126
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 73
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "USM2.pipl"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

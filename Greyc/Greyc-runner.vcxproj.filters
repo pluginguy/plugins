@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Algorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgorithmShared.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CImgI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrashReporting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DericheBlur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GaussianBlur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GPU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GreycC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GreycGPU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GreycWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Threads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algorithm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmRemoteProtocol.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmShared.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CImgI.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrashReporting.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DericheBlur.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GaussianBlur.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glext.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GPU.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUExtensions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GreycC.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GreycGPU.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtil.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
