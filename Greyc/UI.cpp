@@ -664,7 +664,7 @@ namespace
 				HWND hItem = GetDlgItem(hDlg, ID_PROXY_ITEM);
 				SetWindowLongPtr(hItem, GWLP_USERDATA, lParam);
 				hOldProxyWndProc = (WNDPROC) GetWindowLongPtr(hItem, GWLP_WNDPROC);
-				SetWindowLongPtr(hItem, GWLP_WNDPROC, (LONG) ProxyWindowProc);
+				SetWindowLongPtr(hItem, GWLP_WNDPROC, (LONG_PTR) ProxyWindowProc);
 			}
 
 			SetTimer(hDlg, 1, 50, NULL);
