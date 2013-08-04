@@ -74,7 +74,7 @@
       <Command>copy /y "$(TargetPath)" "C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\"
 copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\"
 </Command>
-      <Inputs>$(TargetPath)</Inputs>
+      <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
       <Outputs>C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\$(OutputFile);C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\$(OutputFile);%(Outputs)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
@@ -109,7 +109,7 @@ copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plu
       <Command>copy /y "$(TargetPath)" "C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\"
 copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\"
 </Command>
-      <Inputs>$(TargetPath)</Inputs>
+      <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
       <Outputs>C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\$(OutputFile);C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\$(OutputFile)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
