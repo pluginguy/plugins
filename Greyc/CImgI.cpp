@@ -51,7 +51,7 @@ float *CImgF::aligned_alloc(int iSize, void **pRealAlloc)
 {
 	/* Hack to guarantee memalign(n, 16) for SSE: */
 	*pRealAlloc = new float[iSize + 16];
-	unsigned long iPtr = (unsigned long) *pRealAlloc;
+	uintptr_t iPtr = (uintptr_t) *pRealAlloc;
 	iPtr += 0xF;
 	iPtr &= ~0xF;
 	return (float *) iPtr;
