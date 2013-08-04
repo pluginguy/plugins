@@ -341,7 +341,7 @@ void AddWindowThreadLocks()
 	{
 		HWND hWnd = it->first;
 		WNDPROC hOldWndProc = it->second;
-		SetWindowLongPtr(hWnd, GWLP_WNDPROC, (LONG) LockWindowProc);
+		SetWindowLongPtr(hWnd, GWLP_WNDPROC, (LONG_PTR) LockWindowProc);
 	}
 
 }
@@ -353,7 +353,7 @@ void FreeWindowThreadLocks()
 	{
 		HWND hWnd = it->first;
 		WNDPROC hOldWndProc = it->second;
-		SetWindowLongPtr(hWnd, GWLP_WNDPROC, (LONG) hOldWndProc);
+		SetWindowLongPtr(hWnd, GWLP_WNDPROC, (LONG_PTR) hOldWndProc);
 	}
 
 	delete pWinProcs;
