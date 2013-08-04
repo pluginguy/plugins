@@ -1,3 +1,4 @@
 PhotoshopSDK/
+*.suo
 *.user
 build
