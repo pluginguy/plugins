@@ -73,11 +73,10 @@
     </PostBuildEvent>
     <CustomBuildStep>
       <Message>Copying plugins to Photoshop</Message>
-      <Command>copy /y "$(TargetPath)" "C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\"
-copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\"
+      <Command>copy /y "$(TargetPath)" "C:\Program Files\Common Files\Adobe\Plug-Ins\CC\"
 </Command>
       <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
-      <Outputs>C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\$(OutputFile);C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\$(OutputFile);%(Outputs)</Outputs>
+      <Outputs>C:\Program Files\Common Files\Adobe\Plug-Ins\CC\$(OutputFile);%(Outputs)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -108,11 +107,10 @@ copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plu
     </PostBuildEvent>
     <CustomBuildStep>
       <Message>Copying plugins to Photoshop</Message>
-      <Command>copy /y "$(TargetPath)" "C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\"
-copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\"
+      <Command>copy /y "$(TargetPath)" "C:\Program Files\Common Files\Adobe\Plug-Ins\CC\"
 </Command>
       <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
-      <Outputs>C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\$(OutputFile);C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\$(OutputFile)</Outputs>
+      <Outputs>C:\Program Files\Common Files\Adobe\Plug-Ins\CC\$(OutputFile);%(Outputs)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -1,17 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
@@ -23,17 +15,7 @@
     <RootNamespace>USM2</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-    <PlatformToolset>v140</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-    <PlatformToolset>v140</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <PlatformToolset>v140</PlatformToolset>
@@ -46,15 +28,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
   </ImportGroup>
@@ -65,76 +39,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\$(Configuration)-$(Platform)-$(ProjectName)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\$(Configuration)-$(Platform)-$(ProjectName)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.8bf</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.8bf</TargetExt>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.8bf</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.8bf</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)-x64</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)-x64</TargetName>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;MSWindows=1;Rez=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Common;..\..\..\Common\Headers\Photoshop;..\..\..\Common\Headers\Photoshop\ADM;..\..\..\Common\Headers\Photoshop\AS;..\..\..\Common\Headers\Photoshop\PICA;..\..\..\Common\Headers\Photoshop\PS-Suites;..\..\..\Common\Headers\SDK;..\..\..\Common\Rez-files\Photoshop;..\..\..\Common\Rez-files\SDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>Debug/USM2.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\PhotoshopSDK\samplecode\Common;..\PhotoshopSDK\samplecode\Common\Includes;..\PhotoshopSDK\PhotoshopAPI\Photoshop;..\PhotoshopSDK\PhotoshopAPI\General;..\PhotoshopSDK\PhotoshopAPI\PICA_SP;..\PhotoshopSDK\PhotoshopAPI\ADM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED;_DEBUG;WIN32=1;_WINDOWS;MSWindows=1;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;MSWindows=1;WIN32=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>..\Common;..\..\..\Common\Headers\Photoshop;..\..\..\Common\Headers\Photoshop\ADM;..\..\..\Common\Headers\Photoshop\AS;..\..\..\Common\Headers\Photoshop\PICA;..\..\..\Common\Headers\Photoshop\PS-Suites;..\..\..\Common\Headers\SDK;..\..\..\Common\Rez-files\Photoshop;..\..\..\Common\Rez-files\SDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(TargetPath)</OutputFile>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)$(ProjectName).pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-    <CustomBuildStep>
-      <Command>copy /y "$(TargetPath)" "C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\"</Command>
-      <Outputs>C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\$(OutputFile)</Outputs>
-      <Message>Copying plugins to Photoshop</Message>
-      <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
-    </CustomBuildStep>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;MSWindows=1;Rez=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -181,74 +95,8 @@
       <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
     </Link>
     <CustomBuildStep>
-      <Command>copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\"</Command>
-      <Outputs>C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\$(OutputFile)</Outputs>
-      <Message>Copying plugins to Photoshop</Message>
-      <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
-    </CustomBuildStep>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;MSWindows=1;Rez=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Common;..\..\..\Common\Headers\Photoshop;..\..\..\Common\Headers\Photoshop\ADM;..\..\..\Common\Headers\Photoshop\AS;..\..\..\Common\Headers\Photoshop\PICA;..\..\..\Common\Headers\Photoshop\PS-Suites;..\..\..\Common\Headers\SDK;..\..\..\Common\Rez-files\Photoshop;..\..\..\Common\Rez-files\SDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>Debug/USM2.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>Full</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>..\PhotoshopSDK\samplecode\Common;..\PhotoshopSDK\samplecode\Common\Includes;..\PhotoshopSDK\PhotoshopAPI\Photoshop;..\PhotoshopSDK\PhotoshopAPI\General;..\PhotoshopSDK\PhotoshopAPI\PICA_SP;..\PhotoshopSDK\PhotoshopAPI\ADM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED;WIN32=1;_WINDOWS;MSWindows=1;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
-      <BrowseInformation>
-      </BrowseInformation>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>MSWindows=1;WIN32=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>..\Common;..\..\..\Common\Headers\Photoshop;..\..\..\Common\Headers\Photoshop\ADM;..\..\..\Common\Headers\Photoshop\AS;..\..\..\Common\Headers\Photoshop\PICA;..\..\..\Common\Headers\Photoshop\PS-Suites;..\..\..\Common\Headers\SDK;..\..\..\Common\Rez-files\Photoshop;..\..\..\Common\Rez-files\SDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(TargetPath)</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)$(ProjectName).pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <LinkTimeCodeGeneration>
-      </LinkTimeCodeGeneration>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-    <CustomBuildStep>
-      <Command>copy /y "$(TargetPath)" "C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\"</Command>
-      <Outputs>C:\Program Files (x86)\Adobe\Adobe Photoshop CS6\Plug-ins\$(OutputFile)</Outputs>
+      <Command>copy /y "$(TargetPath)" "C:\Program Files\Common Files\Adobe\Plug-Ins\CC\"</Command>
+      <Outputs>C:\Program Files\Common Files\Adobe\Plug-Ins\CC\$(OutputFile)</Outputs>
       <Message>Copying plugins to Photoshop</Message>
       <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
     </CustomBuildStep>
@@ -311,8 +159,8 @@
       <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
     </Link>
     <CustomBuildStep>
-      <Command>copy /y "$(TargetPath)" "C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\"</Command>
-      <Outputs>C:\Program Files\Adobe\Adobe Photoshop CS6 (64 Bit)\Plug-ins\$(OutputFile)</Outputs>
+      <Command>copy /y "$(TargetPath)" "C:\Program Files\Common Files\Adobe\Plug-Ins\CC\"</Command>
+      <Outputs>C:\Program Files\Common Files\Adobe\Plug-Ins\CC\$(OutputFile)</Outputs>
       <Message>Copying plugins to Photoshop</Message>
       <Inputs>$(TargetPath) $(TargetFileName)</Inputs>
     </CustomBuildStep>
@@ -350,37 +198,23 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="USM2.r">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling PiPL resource...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling PiPL resource...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl /I..\PhotoshopSDK\PhotoshopAPI\General  /I..\PhotoshopSDK\PhotoshopAPI\PICA_SP /I..\PhotoshopSDK\PhotoshopAPI\Photoshop   /I..\PhotoshopSDK\PhotoshopAPI\Resources     /I..\PhotoshopSDK\samplecode\Common\Resources    /I..\PhotoshopSDK\samplecode\Common\Includes /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(IntDir)%(Filename).rr"
-..\PhotoshopSDK\samplecode\resources\cnvtpipl.exe "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).pipl"
-del "$(IntDir)%(Filename).rr"
-</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /I..\PhotoshopSDK\PhotoshopAPI\General  /I..\PhotoshopSDK\PhotoshopAPI\PICA_SP /I..\PhotoshopSDK\PhotoshopAPI\Photoshop   /I..\PhotoshopSDK\PhotoshopAPI\Resources     /I..\PhotoshopSDK\samplecode\Common\Resources    /I..\PhotoshopSDK\samplecode\Common\Includes /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(IntDir)%(Filename).rr"
 ..\PhotoshopSDK\samplecode\resources\cnvtpipl.exe "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).pipl"
 del "$(IntDir)%(Filename).rr"
 </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).pipl;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).pipl;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compiling PiPL resource...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling PiPL resource...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl /I..\PhotoshopSDK\PhotoshopAPI\General  /I..\PhotoshopSDK\PhotoshopAPI\PICA_SP /I..\PhotoshopSDK\PhotoshopAPI\Photoshop   /I..\PhotoshopSDK\PhotoshopAPI\Resources     /I..\PhotoshopSDK\samplecode\Common\Resources    /I..\PhotoshopSDK\samplecode\Common\Includes /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(IntDir)%(Filename).rr"
-..\PhotoshopSDK\samplecode\resources\cnvtpipl.exe "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).pipl"
-del "$(IntDir)%(Filename).rr"
-</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /I..\PhotoshopSDK\PhotoshopAPI\General  /I..\PhotoshopSDK\PhotoshopAPI\PICA_SP /I..\PhotoshopSDK\PhotoshopAPI\Photoshop   /I..\PhotoshopSDK\PhotoshopAPI\Resources     /I..\PhotoshopSDK\samplecode\Common\Resources    /I..\PhotoshopSDK\samplecode\Common\Includes /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(IntDir)%(Filename).rr"
 ..\PhotoshopSDK\samplecode\resources\cnvtpipl.exe "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).pipl"
 del "$(IntDir)%(Filename).rr"
 </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).pipl;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).pipl;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="USM2.rc">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\PhotoshopSDK\samplecode\common\resources;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\PhotoshopSDK\samplecode\common\resources;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\PhotoshopSDK\samplecode\common\resources;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\PhotoshopSDK\samplecode\common\resources;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemGroup>
