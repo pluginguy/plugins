@@ -6,24 +6,10 @@
 
 string StringUtil::vssprintf(const char *szFormat, va_list va)
 {
-	string sStr;
-
-	char *pBuf = NULL;
-	int iChars = 1;
-	int iUsed = 0;
-	int iTry = 0;
-
-	do
-	{
-		iChars += iTry * 2048;
-		pBuf = (char*) _alloca(sizeof(char)*iChars);
-		iUsed = vsnprintf(pBuf, iChars-1, szFormat, va);
-		++iTry;
-	} while(iUsed < 0);
-
-	// assign whatever we managed to format
-	sStr.assign(pBuf, iUsed);
-	return sStr;
+	int iBytes = vsnprintf(NULL, 0, szFormat, va);
+	char *pBuf = (char*) _alloca(iBytes + 1);
+	vsnprintf(pBuf, iBytes, szFormat, va);
+	return string(pBuf, iBytes);
 }
 
 string StringUtil::ssprintf(const char *fmt, ...)
