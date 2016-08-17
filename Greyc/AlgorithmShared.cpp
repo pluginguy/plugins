@@ -64,6 +64,6 @@ AlgorithmOptions::AlgorithmOptions()
 {
 	nb_threads = 0;
 	m_DisplayMode = DISPLAY_SINGLE;
-	m_bGPU = false;
+	m_bGPU = true;
 }
 
