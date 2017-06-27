@@ -1,6 +1,7 @@
 #ifndef PHOTOSHOP_HELPERS_H
 #define PHOTOSHOP_HELPERS_H
 
+#include "Photoshop.h"
 #include "PIFilter.h"
 
 #include "Helpers.h"
