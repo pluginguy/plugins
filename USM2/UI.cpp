@@ -849,7 +849,6 @@ namespace
 				}
 			}
 
-			printf("cmd %x, %x\n", wParam, lParam);
 			if(wParam == 0)
 			{
 				ShowAboutDialog(hDlg);

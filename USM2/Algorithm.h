@@ -4,6 +4,7 @@
 #include "CImgI.h"
 #include "Threads.h"
 #include "Helpers.h"
+#include <memory>
 
 struct Algorithm
 {

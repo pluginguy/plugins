@@ -5,6 +5,7 @@
 
 #include <exception>
 #include <string>
+#include <memory>
 #include <windows.h>
 #include <intrin.h>
 using namespace std;

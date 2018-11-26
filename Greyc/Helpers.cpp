@@ -506,7 +506,7 @@ int WriteWithTimeout(HANDLE hFile, const void *pBuf, int iSize, HANDLE hEvent, i
 
 static DWORD WINAPI DebugBreakThread(void *p)
 {
-	int iMilliseconds = (int) p;
+	int iMilliseconds = (int) (intptr_t) p;
 	Sleep(iMilliseconds);
 	if(IsDebuggerPresent())
 		DebugBreak();
@@ -516,7 +516,7 @@ static DWORD WINAPI DebugBreakThread(void *p)
 void QueueDebugBreak(int iMilliseconds)
 {
 	unsigned long iThreadID = 0;
-	HANDLE hHandle = CreateThread(0, 0, DebugBreakThread, (void *) iMilliseconds, 0, &iThreadID);
+	HANDLE hHandle = CreateThread(0, 0, DebugBreakThread, (void *) (int64_t) iMilliseconds, 0, &iThreadID);
 	assert(hHandle != INVALID_HANDLE_VALUE);
 	CloseHandle(hHandle);
 	return;
