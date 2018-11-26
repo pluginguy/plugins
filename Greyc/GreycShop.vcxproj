@@ -46,8 +46,8 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\$(Configuration)-$(Platform)-$(ProjectName)\</IntDir>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.8bf</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.8bf</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)-x64</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)-x64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)</TargetName>
     <CustomBuildAfterTargets Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     </CustomBuildAfterTargets>
     <CustomBuildAfterTargets Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
